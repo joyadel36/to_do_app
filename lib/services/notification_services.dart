@@ -132,6 +132,7 @@ class NotifyHelper {
         scheduledDate = scheduledDate.subtract(Duration(minutes: 10));
       if (remind == 20)
         scheduledDate = scheduledDate.subtract(Duration(minutes: 20));
+   return scheduledDate;
     }
     cancelNotification(Task task) async {
       await flutterLocalNotificationsPlugin.cancel(task.id!);
